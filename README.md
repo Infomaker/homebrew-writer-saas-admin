@@ -5,9 +5,9 @@ This is the home of the "Writer saas admin Homebrew tap"
 ## How to install
 
 ```
+brew install bash-completion
 brew tap infomaker/writer-saas-admin
 brew install writer-saas-admin
-brew install bash-completion
 ```
 
 ## Publishing a new release
@@ -24,15 +24,15 @@ Start by calculating the SHA-256 sum of the new release by running the command b
 Replace `X.X.X` with the new version (i.e. to the latest tag in git):
 
 ```bash
-curl -sL https://bitbucket.org/infomaker/writer-saas-admin/src/0.1.1/ | shasum -a 256
+curl -sL https://writer-saas-admin.s3-eu-west-1.amazonaws.com/0.1.4.zip | shasum -a 256
 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  -
 ```
 
 Copy the out put (without the trailing (`  -`) and then proceed to editing the `writer-saas-admin.rb` file.
 
+- In `version` replace the version info.
 - In `url`, replace the version info.
 - In `sha256`, enter the new shasum above.
-- in `main.appVersion`, replace with new version
 
 ### Make a new release
 

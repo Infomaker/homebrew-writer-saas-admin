@@ -4,23 +4,18 @@
 class WriterSaasAdmin < Formula
   desc "Writer saas admin Homebrew tap"
   homepage "https://bitbucket.org/infomaker/writer-saas-admin/"
-  url "https://bitbucket.org/infomaker/writer-saas-admin/src/0.1.1/"
-  version "0.1.1"
-  sha256 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-
-  depends_on "go" => :build
+  version "0.1.4"
+  url "https://writer-saas-admin.s3-eu-west-1.amazonaws.com/0.1.4.zip"
+  sha256 "eed875d11532e4a4c70c1b8f9ec9f19d06d4880bad4cddb3d50a16f087b63505"
 
   def install
-    ENV["GOPATH"] = buildpath
 
-    system "go", "build", "-mod", "vendor", "-ldflags", "-w -s -X main.appVersion=0.1.1", "-o", "writer-saas-admin", "cmd/writer-saas-admin/main.go"
-    bin.install "writer-tool"
-
-    system "go", "writer-saas-admin", "completion"
+    bin.install "writer-saas-admin"
     bash_completion.install "bash-completion/writer-saas-admin"
+
   end
 
   test do
-    system "#{bin}/writer-tool"
+    system "#{bin}/writer-saas-admin"
   end
 end
