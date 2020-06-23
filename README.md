@@ -24,7 +24,7 @@ Start by calculating the SHA-256 sum of the new release by running the command b
 Replace `X.X.X` with the new version (i.e. to the latest tag in git):
 
 ```bash
-curl -sL https://writer-saas-admin.s3-eu-west-1.amazonaws.com/0.1.5.zip | shasum -a 256
+curl -sL https://writer-saas-admin.s3-eu-west-1.amazonaws.com/0.1.7.tar.gz | shasum -a 256
 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  -
 ```
 
