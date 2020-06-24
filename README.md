@@ -24,8 +24,8 @@ Start by calculating the SHA-256 sum of the new release by running the command b
 Replace `X.X.X` with the new version (i.e. to the latest tag in git):
 
 ```bash
-curl -sL https://writer-saas-admin.s3-eu-west-1.amazonaws.com/0.1.13.tar.gz | shasum -a 256
-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  -
+curl -sL https://writer-saas-admin.s3-eu-west-1.amazonaws.com/0.1.14.tar.gz | shasum -a 256
+ab83736528264f2f835026a15a164a72b434e811046076f83932017011c9b7b8  -
 ```
 
 Copy the out put (without the trailing (`  -`) and then proceed to editing the `writer-saas-admin.rb` file.
