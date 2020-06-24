@@ -12,7 +12,6 @@ class WriterSaasAdmin < Formula
 
     bin.install "writer-saas-admin"
     bash_completion.install "bash-completion/writer-saas-admin"
-    zsh_completion.install "bash-completion/writer-saas-admin"
 
   end
 
