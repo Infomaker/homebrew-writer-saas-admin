@@ -4,8 +4,42 @@ This is the home of the "Writer saas admin Homebrew tap"
 
 ## How to install
 
+To enable tab-completion you need to install one of the following:
+
+For zsh:
+
+```bash
+brew install zsh-completion
 ```
+
+And to enable zsh completion for `zsh` you will need to add this to your `.zshrc`:
+
+```bash
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+
+  autoload -Uz compinit
+  compinit
+fi
+```
+
+For bash:
+
+```bash
 brew install bash-completion
+```
+
+And to enable bash completion for `bash` you will need to add this to your `.bash_profile`:
+
+```bash
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    . $(brew --prefix)/etc/bash_completion
+fi
+```
+
+And to install the `Writer-saas-admin` tool run:
+
+```
 brew tap infomaker/writer-saas-admin
 brew install writer-saas-admin
 ```
