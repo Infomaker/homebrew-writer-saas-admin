@@ -14,12 +14,14 @@ brew install zsh-completion
 
 And to enable zsh completion for `zsh` you will need to add this to your `.zshrc`:
 
+If you are using `oh-my-zsh`
+
 ```bash
 plugins=(… zsh-completions)
 autoload -U compinit && compinit
 ```
 
-or:
+else:
 
 ```bash
 if type brew &>/dev/null; then
@@ -43,7 +45,7 @@ For bash:
 brew install bash-completion
 ```
 
-And to enable bash completion for `bash` you will need to add this to your `.bash_profile`:
+And to enable bash completion for you will need to add this to your `.bash_profile`:
 
 ```bash
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
@@ -72,8 +74,8 @@ Start by calculating the SHA-256 sum of the new release by running the command b
 Replace `X.X.X` with the new version (i.e. to the latest tag in git):
 
 ```bash
-curl -sL https://writer-saas-admin.s3-eu-west-1.amazonaws.com/0.1.14.tar.gz | shasum -a 256
-ab83736528264f2f835026a15a164a72b434e811046076f83932017011c9b7b8  -
+curl -sL https://writer-saas-admin.s3-eu-west-1.amazonaws.com/1.0.0.tar.gz | shasum -a 256
+b5c23720b292d56cb7b0a8060930af301f2ac7645149df3ed705e06012604abf  -
 ```
 
 Copy the out put (without the trailing (`  -`) and then proceed to editing the `writer-saas-admin.rb` file.
