@@ -60,6 +60,13 @@ brew tap infomaker/writer-saas-admin
 brew install writer-saas-admin
 ```
 
+To update an already installed CLI run:
+
+```bash
+brew update
+brew upgrade writer-saas-admin
+```
+
 ## Publishing a new release
 
 When a new version has been published on [Writer saas source code](https://bitbucket.org/infomaker/writer-saas-admin/) this repo needs to be updated to enable Brew installations or brew updates to latest version.
