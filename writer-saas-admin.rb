@@ -4,9 +4,9 @@
 class WriterSaasAdmin < Formula
   desc "Writer saas admin Homebrew tap"
   homepage "https://bitbucket.org/infomaker/writer-saas-admin/"
-  version "1.1.0"
-  url "https://writer-saas-admin.s3-eu-west-1.amazonaws.com/1.1.0.tar.gz"
-  sha256 "9a165d398998c1baa7f5a80d290aedef5ec71ec7e556d5bb0520549228376c06"
+  version "1.2.0"
+  url "https://writer-saas-admin.s3-eu-west-1.amazonaws.com/1.2.0.tar.gz"
+  sha256 "63eb99dae04ed56659babf5dcfd4329e144b8322d5100caf66e813e6b79ac246"
 
   def install
 
