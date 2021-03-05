@@ -6,39 +6,6 @@ This is the home of the "Writer saas admin Homebrew tap"
 
 To enable tab-completion you need to install one of the following:
 
-For zsh:
-
-```bash
-brew install zsh-completion
-```
-
-And to enable zsh completion for `zsh` you will need to add this to your `.zshrc`:
-
-If you are using `oh-my-zsh`
-
-```bash
-plugins=(… zsh-completions)
-autoload -U compinit && compinit
-```
-
-else:
-
-```bash
-if type brew &>/dev/null; then
-  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
-
-  autoload -Uz compinit
-  compinit
-fi
-```
-
-Additionally, if you receive "zsh compinit: insecure directories" warnings when attempting
-to load these completions, you may need to run this:
-
-```bash
-chmod go-w '/usr/local/share'
-```
-
 For bash:
 
 ```bash
