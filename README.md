@@ -12,7 +12,7 @@ For bash:
 brew install bash-completion
 ```
 
-And to enable bash completion for you will need to add this to your `.bash_profile`:
+And to enable bash completion you will need to add this to your `.bash_profile`:
 
 ```bash
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
@@ -48,8 +48,8 @@ Start by calculating the SHA-256 sum of the new release by running the command b
 Replace `X.X.X` with the new version (i.e. to the latest tag in git):
 
 ```bash
-curl -sL https://writer-saas-admin.s3-eu-west-1.amazonaws.com/1.2.0.tar.gz | shasum -a 256
-9a165d398998c1baa7f5a80d290aedef5ec71ec7e556d5bb0520549228376c06  -
+curl -sL https://writer-saas-admin.s3-eu-west-1.amazonaws.com/1.2.1.tar.gz | shasum -a 256
+c03b8083dd2bd2548c40223dc222690016ba5a0800180f5e5446c1a6e29d403d  -
 ```
 
 Copy the out put (without the trailing (`  -`) and then proceed to editing the `writer-saas-admin.rb` file.
