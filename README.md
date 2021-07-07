@@ -6,46 +6,13 @@ This is the home of the "Writer saas admin Homebrew tap"
 
 To enable tab-completion you need to install one of the following:
 
-For zsh:
-
-```bash
-brew install zsh-completion
-```
-
-And to enable zsh completion for `zsh` you will need to add this to your `.zshrc`:
-
-If you are using `oh-my-zsh`
-
-```bash
-plugins=(… zsh-completions)
-autoload -U compinit && compinit
-```
-
-else:
-
-```bash
-if type brew &>/dev/null; then
-  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
-
-  autoload -Uz compinit
-  compinit
-fi
-```
-
-Additionally, if you receive "zsh compinit: insecure directories" warnings when attempting
-to load these completions, you may need to run this:
-
-```bash
-chmod go-w '/usr/local/share'
-```
-
 For bash:
 
 ```bash
 brew install bash-completion
 ```
 
-And to enable bash completion for you will need to add this to your `.bash_profile`:
+And to enable bash completion you will need to add this to your `.bash_profile`:
 
 ```bash
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
@@ -58,6 +25,13 @@ And to install the `Writer-saas-admin` tool run:
 ```
 brew tap infomaker/writer-saas-admin
 brew install writer-saas-admin
+```
+
+To update an already installed CLI run:
+
+```bash
+brew update
+brew upgrade writer-saas-admin
 ```
 
 ## Publishing a new release
@@ -74,8 +48,8 @@ Start by calculating the SHA-256 sum of the new release by running the command b
 Replace `X.X.X` with the new version (i.e. to the latest tag in git):
 
 ```bash
-curl -sL https://writer-saas-admin.s3-eu-west-1.amazonaws.com/1.2.0.tar.gz | shasum -a 256
-9a165d398998c1baa7f5a80d290aedef5ec71ec7e556d5bb0520549228376c06  -
+curl -sL https://writer-saas-admin.s3-eu-west-1.amazonaws.com/1.2.1.tar.gz | shasum -a 256
+c03b8083dd2bd2548c40223dc222690016ba5a0800180f5e5446c1a6e29d403d  -
 ```
 
 Copy the out put (without the trailing (`  -`) and then proceed to editing the `writer-saas-admin.rb` file.
